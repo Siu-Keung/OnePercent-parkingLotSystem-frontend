@@ -10,11 +10,17 @@ import PersonalPage from "./PersonalPage";
 import FontAwesomeIcon from 'react-fontawesome'
 import '../../../node_modules/font-awesome/css/font-awesome.css'
 import {Icon} from 'antd'
+import globalConfig from '../../conf'
+
+const frontendHost = globalConfig.frontendHost
 
 class mobileMain extends React.Component {
 
     componentWillMount() {
         let item = localStorage.getItem("token");
+        if(!item){
+            window.location.href = `${frontendHost}/mobile/login`
+        }
     }
 
     constructor(props) {
