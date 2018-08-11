@@ -41,7 +41,6 @@ class PersonalPage extends Component {
                         <Brief>点击开始请假</Brief>
                     </Item>
                 </List>
-                <Button type="primary" style={{margin: "120px 20px 0 20px"}} onClick={this.handleStartWork}>打卡</Button>
                 <Button type="warning" onClick={() => this.quit()}
                         style={{margin: "15px 20px 0 20px"}}>退出</Button><WhiteSpace/>
             </div>
@@ -51,12 +50,6 @@ class PersonalPage extends Component {
     quit = () => {
         localStorage.clear();
         window.location.href = "https://appparkinglot.herokuapp.com/mobile/login"
-    }
-
-    handleStartWork = () => {
-
-        console.log("handleStartWork")
-        userApi.startWork()
     }
 
     render() {
