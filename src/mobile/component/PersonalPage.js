@@ -42,7 +42,7 @@ class PersonalPage extends Component {
                     </Item>
                 </List>
                 <Button type="warning" onClick={() => this.quit()}
-                        style={{margin: "15px 20px 0 20px"}}>退出</Button><WhiteSpace/>
+                        style={{position: 'absolute', width: '90%', bottom: '10px'}}>退出</Button><WhiteSpace/>
             </div>
         );
     }
