@@ -20,7 +20,7 @@ class mobileMain extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: '个人',
+            selectedTab: '抢单',
             hidden: false,
         };
     }
