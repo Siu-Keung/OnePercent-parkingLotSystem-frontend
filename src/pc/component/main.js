@@ -13,7 +13,6 @@ import LeavingContainer from "./LeavingContainer";
 const {Header, Content, Footer, Sider} = Layout;
 const SubMenu = Menu.SubMenu;
 
-
 class Main extends Component {
 
     state = {
@@ -26,13 +25,13 @@ class Main extends Component {
 
     logout = () => {
         localStorage.clear();
-        window.location.href = `https://appparkinglot.herokuapp.com/login`;
+        window.location.href = `https://parkinglotsystem.herokuapp.com/login`;
     }
 
     componentWillMount = () => {
         // console.log(localStorage.getItem("token"))
         if (localStorage.getItem("token") === null) {
-            window.location.href = `https://appparkinglot.herokuapp.com/login`
+            window.location.href = `https://parkinglotsystem.herokuapp.com/login`
         }
         else {
             fetch(`${conf.domain}/userInfo`, {
@@ -46,7 +45,7 @@ class Main extends Component {
                         if (value === "istrue") {
                             console.log("已登录");
                         } else {
-                            window.location.href = `https://appparkinglot.herokuapp.com/login`
+                            window.location.href = `https://parkinglotsystem.herokuapp.com/login`
                         }
                     })
 
